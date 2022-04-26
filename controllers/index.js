@@ -1,13 +1,14 @@
 const path = require('path')
 const googleTrends = require('google-trends-api');
-const fetch = require('node-fetch')
+// const fetch = require('node-fetch');
 const { response } = require('express');
 const axios = require('axios')
+const https= require('https')
 
 
 
-var Uspto = require('uspto');
-const { request } = require('http');
+
+
 
 var options = {
   query: 'IN/KANG-HO-FAN'
@@ -247,26 +248,6 @@ exports.postDaily = async (req, res) => {
       if (error) console.log(error);
   }
 }
-exports.getPatent = async(req, res) => {
-  const url = ('https://developer.uspto.gov/ibd-api/v1/application/publications?start=0&rows=100&largeTextSearchFlag')
-  const options = {
-    'method':"GET",
-    "access-control-allow-credentials": "true"
-  };
-
-  const response = await fetch(url,options)
-  .then(res => res.json())
-  .catch(e => {
-    console.error({
-      "message" : "oh noes",
-      error:e
-    })
-  })
-
-  console.log(response);
-  res.json(response)
-
-}
 // exports.getPatent = async(req, res) => {
 //   const url = ('https://jsonplaceholder.typicode.com/posts')
 //   const options = {
@@ -286,30 +267,27 @@ exports.getPatent = async(req, res) => {
 //   res.json(response)
 
 // }
-// exports.getPatent = async(req, res) => {
-//   const url = ('https://developer.uspto.gov/ibd-api/v1/application/publications?start=0&rows=100&largeTextSearchFlag')
+exports.getPatent = async(req, res) => {
  
+
   
-//   // params.append('a', 1);
-//   const options = {
-//     'method':"GET",
+    try {
+        const result = await axios.get("https://developer.uspto.gov/ibd-api/v1/application/publications?start=0&rows=100&largeTextSearchFlag", {
+            httpsAgent: new https.Agent({
+              rejectUnauthorized: false // set to false
+            })
+        })
+        res.render('patent',{articles : result.data})
+        
+        
+    } catch(err) {
+        console.log(err?.message||err)
+    }
     
-//   };
+}
 
-//   const response = await fetch(url,options)
-//   .then(res => res.json())
-  
-//   .catch(e => {
-//     console.error({
-//       "message" : "oh noes",
-//       error:e
-//     })
-//   })
 
-//   console.log(response);
-//   res.json(response)
 
-// }
   
 //       // const patentApi = await axios.get("https://dummyjson.com/products")
 //       // .then(function(response){
@@ -372,15 +350,3 @@ exports.getPatent = async(req, res) => {
 // })
 
 
-// const api = fetch('https://developer.uspto.gov/ibd-api/v1/application/publications?start=0&rows=100&largeTextSearchFlag', { // fake API endpoint
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(api), // turn the JS object literal into a JSON string
-// })
-//   .then(res => res.json())
-//   .then(data => console.log(data))
-//   .catch(err => {
-//     console.error(err);
-//   });
