@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h3>patent api</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles</title>
+  </head>
+  <body>
+    <!-- <% Object.values(articles).forEach((article)=> { %> <%- article %> <% }) %> -->
 
-     <% articles.results.forEach(function(article,index){ %> 
-        
-        <%- article.inventionTitle %>
+    <form action="/trends/patent" method="POST" autocomplete="off">
+      <input
+        type="text"
+        id="keyword"
+        name="search"
+        class="search"
+        placeholder="Search patent"
+        required
+      />
 
-  <%  }) %> 
-</body>
+      <button class="btn" type="submit" value="search">Search</button>
+    </form>
+  </body>
 </html>
-
-
-
-
-
-

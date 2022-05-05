@@ -11,7 +11,9 @@ const {
     postOverTime,
     getDaily,
     postDaily,
-    getPatent
+    getPatent,
+    postPatent
+    
    
     
 } = require('../controllers/index');
@@ -28,6 +30,9 @@ router.get('/overtime', getOverTime)
     
     .post('/daily', postDaily)
     .get('/patent',getPatent)
+    .post('/patent',postPatent)
+    
+    
 
 
 module.exports = router;

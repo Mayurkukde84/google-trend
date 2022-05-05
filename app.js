@@ -25,6 +25,7 @@ const index = require('./routes/index');
 app.get('/', (req, res)=>{
     res.redirect('/trends/overtime')
 });
+
 app.use('/trends', index);
 
 
