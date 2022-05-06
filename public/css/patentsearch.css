@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@0,200;0,300;0,400;1,300;1,400&family=Roboto:ital,wght@1,500&display=swap');
+
+body{
+    background-color: #f2eded;
+    color: gray;
+    margin: 0%;
+    box-sizing: border-box;
+    padding: 30px;
+    font-family: 'Noto Sans', sans-serif;
+}
+.title{
+    border: 2px solid black;
+    padding: 20px;
+    
+}
+.patent .title{
+    display: flex;
+
+   
+}
+
+
+.patent{
+    list-style: none;
+    padding: 20px;
+}
+
+.patent .title h3 p{
+
+   margin-bottom: 10px;
+   margin-left: 180px;
+   color: cornflowerblue;
+}
+.patent .title h3{
+    color: black;
+}

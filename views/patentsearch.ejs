@@ -4,17 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Articles</title>
+    <title>patent</title>
+    <link rel="stylesheet" href="/css/patentsearch.css" />
   </head>
   <body>
-    <%  { %> 
-      <h3> ProductShortName: <%=articles.productShortName %></h3>
-      <h3> ProductTitle: <%- articles.productTitle %></h3>
-      <h3> ProductArticles: <%- articles.productDesc %></h3>
-    
-        
-    <% } %>
-
    
+    
+      <% { %>
+      <ul class="patent">
+        <li>
+          <div class="title">
+            <h3>ProductShortName: <p><%=articles.productShortName %></p></h3>
+          </div>
+        </li>
+        <li>
+          <div class="title"><h3>ProductTitle: <p><%= articles.productTitle %></p> </div></h3>
+        </li>
+        <li>
+          <div class="title">
+            <h3>ProductIdentifier: <p><%=articles.productIdentifier %></p></h3>
+          </div>
+        </li>
+        
+        <li>
+          <div class="title"><h3>ProductArticles: <p><%= articles.productDesc %></p> </h3> </div>
+        </li>
+        <li>
+          <div class="title"><h3>ProductFromDate: <p><%= articles.productFromDate %></p> </h3> </div>
+        </li>
+        <li>
+          <div class="title"><h3>ProductToDate: <p><%= articles.productToDate %></p> </h3> </div>
+        </li>
+      </ul>
+
+      <% } %>
+ 
   </body>
 </html>

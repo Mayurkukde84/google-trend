@@ -19,15 +19,10 @@ const margin = {
     left: 60,
     right: 10
 }
-/**
- * DEFINE SVG AREA
- */
+
 const width = 420 - margin.left - margin.right;
 const height = 480 - margin.top - margin.bottom;
 
-/**
- * CREATE SVG
- */
 const svg = d3.select('div.res')
     .append('svg')
     .attr('width', width + margin.left + margin.right)
@@ -36,24 +31,18 @@ const svg = d3.select('div.res')
     .append('g') // append group to the svg
     .attr('transform', `translate(${margin.left}, ${margin.top})`)
 
-/**
- * RECTANGLES
- */
+
 const rects = svg.selectAll('rect')
     .data(data) // use the data to create rectangles
 
 
-/**
- * Y SCALE
- */
+
 const yScale = d3.scaleLinear()
     // domain definition, max and min y values
     .domain([d3.min(data, d => +d.value), d3.max(data, d => +d.value)]) // use d3.min and .max to find values inside the array
     .range([height, 0]) // min and max value of the svg container 
 
-/**
- * X SCALE
- */
+
 let sum = 0
 let min = d3.min(data, d => +d.value)
 let max = d3.max(data, d => +d.value)

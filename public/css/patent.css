@@ -1,0 +1,12 @@
+body{
+    background-color: #f2eded;
+    color: gray;
+}
+
+form{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+
+}

@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Articles</title>
+    <link rel="stylesheet" href="/css/patent.css">
+
+    
   </head>
   <body>
     <!-- <% Object.values(articles).forEach((article)=> { %> <%- article %> <% }) %> -->
-
+   
     <form action="/trends/patent" method="POST" autocomplete="off">
       <input
         type="text"
         id="keyword"
         name="search"
         class="search"
-        placeholder="Search patent"
+        placeholder="Enter Uspto productShortName"
         required
       />
 
