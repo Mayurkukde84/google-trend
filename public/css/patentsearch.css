@@ -8,29 +8,70 @@ body{
     padding: 30px;
     font-family: 'Noto Sans', sans-serif;
 }
+button{
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+input{
+    font-size: medium;
+    width: max-content;
+}
+
 .title{
-    border: 2px solid black;
-    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
+-webkit-box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
+-moz-box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
+border-radius: 10px;
+padding: 10px;
+height: 80%;
+background-color: rgb(76, 37, 82);
+color: white;
+ display: flex; 
+ /* margin-bottom: 30px; */
+
     
 }
-.patent .title{
-    display: flex;
+.title h2{
+    margin-left: 20px;
+    background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+
 
    
+     
+   
+
+}
+.title h3{
+    margin-top: 25px;
+    height: auto;
+    color: rgb(43, 231, 143);
+    
+    text-align: justify;
+    word-wrap: break-word;
+    width: auto;
 }
 
-
-.patent{
-    list-style: none;
-    padding: 20px;
+#shortname{
+    margin-left: 20px;
 }
 
-.patent .title h3 p{
-
-   margin-bottom: 10px;
-   margin-left: 180px;
-   color: cornflowerblue;
+#producttitle{
+    margin-left: 95px;
 }
-.patent .title h3{
-    color: black;
+
+#productdesc{
+    margin-left: 85px;
+}
+
+#productfromdate{
+    margin-left: 25px;
+}
+
+#producttodate{
+    margin-left: 55px;
 }

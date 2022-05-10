@@ -24,5 +24,14 @@
     "ssl-root-cas": "^1.3.1",
     "undici": "^5.0.0",
     "uspto": "^2.0.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mayurkukde84/google-trend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mayurkukde84/google-trend/issues"
+  },
+  "homepage": "https://github.com/Mayurkukde84/google-trend#readme"
 }

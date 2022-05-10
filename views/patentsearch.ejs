@@ -6,36 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>patent</title>
     <link rel="stylesheet" href="/css/patentsearch.css" />
+    <link rel="stylesheet" href="/css/patent.css" />
   </head>
   <body>
-   
+    <form action="/trends/patent" method="POST" autocomplete="off">
+      <input
+        type="text"
+        id="keyword"
+        name="search"
+        class="search"
+        placeholder="Enter Uspto productShortName"
+        required
+      />
+
+      <button class="btn" type="submit" value="search">Search</button>
+    </form>
     
       <% { %>
-      <ul class="patent">
-        <li>
+     
+       
           <div class="title">
-            <h3>ProductShortName: <p><%=articles.productShortName %></p></h3>
-          </div>
-        </li>
-        <li>
-          <div class="title"><h3>ProductTitle: <p><%= articles.productTitle %></p> </div></h3>
-        </li>
-        <li>
+            <h2>ProductShortName:   </h2>
+            <h3 id="shortname"><%=articles.productShortName %></h3>
+          </div> 
           <div class="title">
-            <h3>ProductIdentifier: <p><%=articles.productIdentifier %></p></h3>
-          </div>
-        </li>
+            <h2>ProductTitle:   </h2>
+            <h3 id="producttitle"><%=articles.productTitle %></h3>
+          </div> 
+          <div class="title">
+            <h2>ProductDesc:   </h2>
+            <h3 id="productdesc"><%=articles.productDesc %></h3>
+          </div> 
+          <div class="title">
+            <h2>ProductFromDate:   </h2>
+            <h3 id="productfromdate"><%=articles.productFromDate %></h3>
+          </div> 
+          <div class="title">
+            <h2>ProductToDate:   </h2>
+            <h3 id="producttodate"><%=articles.productToDate %></h3>
+          </div> 
         
-        <li>
-          <div class="title"><h3>ProductArticles: <p><%= articles.productDesc %></p> </h3> </div>
-        </li>
-        <li>
-          <div class="title"><h3>ProductFromDate: <p><%= articles.productFromDate %></p> </h3> </div>
-        </li>
-        <li>
-          <div class="title"><h3>ProductToDate: <p><%= articles.productToDate %></p> </h3> </div>
-        </li>
-      </ul>
 
       <% } %>
  

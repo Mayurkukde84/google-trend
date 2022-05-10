@@ -48,18 +48,13 @@ let min = d3.min(data, d => +d.value)
 let max = d3.max(data, d => +d.value)
 let media = 0;
 data.forEach(t => {
-    // console.log(t.time)
+    
     if (t.value >= min) {
-        // console.log(t.value)
+       
         sum = sum + +t.value;
     }
 });
 media = sum / data.length;
-// console.log('DataLength ' + dataLength);
-// console.log('Max ' + min);
-// console.log('Min ' + max);
-// console.log('Sum ' + sum);
-// console.log('Media ' + Math.round(media));
 
 // Show average of values
 const xScale = d3.scaleBand()
@@ -71,9 +66,7 @@ const xScale = d3.scaleBand()
  * COLORS
  */
 const colour = d3.scaleOrdinal(d3['schemeSet3'])
-/**
- * DRAW RECTANGLES ENTER METHOD
- */
+
 rects.enter().append('rect')
     // .style('fill', d => colour(d.value))
     .style('fill', '#e3dede')

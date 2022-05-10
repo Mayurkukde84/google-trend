@@ -272,7 +272,7 @@ exports.getPatent = async (req, res) => {
     
 
     res.render("patent", { articles: result.data });
-    console.log(result.data.productDesc);
+
   } catch (err) {
     console.log(err?.message || err);
   }
@@ -291,7 +291,7 @@ exports.postPatent = async (req, res) => {
     
 
     res.render("patentsearch", { articles: result.data});
-    console.log(result.data.productDesc);
+    
   } catch (err) {
     console.log(err?.message || err);
   }
