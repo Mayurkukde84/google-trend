@@ -1,3 +1,4 @@
+<%- include ('navbar.ejs') %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +12,10 @@
   </head>
   <body>
     <!-- <% Object.values(articles).forEach((article)=> { %> <%- article %> <% }) %> -->
-   
+    
+      
+
+    <div class="field">
     <form action="/trends/patent" method="POST" autocomplete="off">
       <input
         type="text"
@@ -21,8 +25,13 @@
         placeholder="Enter Uspto productShortName"
         required
       />
-
-      <button class="btn" type="submit" value="search">Search</button>
+      <button  class="btn btn-primary" value="search" type="submit">
+        Search
+      </button>
+      
     </form>
+    
+    
+  </div>
   </body>
 </html>

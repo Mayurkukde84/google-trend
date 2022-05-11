@@ -1,12 +1,38 @@
-body{
-    background-color: #f2eded;
-    color: gray;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
-form{
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    margin-top: 5%;
+body {
+  background-color: #d2d8e7;
+}
+
+form {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 22px;
+  align-items: flex;
+ 
+}
+input{
+  border-radius: 10px;
+  width: 350px;
+}
+button {
+  margin-bottom: 5px;
+  font-size: medium;
+  border-radius: 15px;
+}
+
+.field{
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  gap: 10px;
 
 }

@@ -1,77 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@0,200;0,300;0,400;1,300;1,400&family=Roboto:ital,wght@1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@0,200;0,300;0,400;1,300;1,400&family=Roboto:ital,wght@1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Nunito:ital,wght@0,200;0,300;0,400;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,500&family=Ubuntu:wght@300&display=swap');
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 
-body{
-    background-color: #f2eded;
-    color: gray;
-    margin: 0%;
-    box-sizing: border-box;
-    padding: 30px;
-    font-family: 'Noto Sans', sans-serif;
-}
-button{
-    margin-bottom: 20px;
-    font-size: medium;
 }
 
+body {
+  background-color: #9e9fa3;
+  background-position: center;
+  margin: 0%;
+  box-sizing: border-box;
+ 
+  font-family: "Noto Sans", sans-serif;
+}
+.Body{
+  
+  padding: 30px;
+}
+form {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 22px;
+  align-items: flex;
+ 
+}
 input{
-    font-size: medium;
-    width: max-content;
+  border-radius: 10px;
+  width: 350px;
+}
+button {
+  margin-bottom: 5px;
+  font-size: medium;
+  border-radius: 15px;
 }
 
-.title{
-    margin-top: 20px;
-    box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
--webkit-box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
--moz-box-shadow: 14px 21px 66px 0px rgba(0,0,0,0.73);
-border-radius: 10px;
-padding: 10px;
-height: 80%;
-background-color: rgb(76, 37, 82);
-color: white;
- display: flex; 
- /* margin-bottom: 30px; */
+.field{
+  margin-top: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  gap: 10px;
 
+}
+
+.title {
+  margin-top: 20px;
+  box-shadow: 14px 21px 66px 0px rgba(0, 0, 0, 0.73);
+  -webkit-box-shadow: 14px 21px 66px 0px rgba(0, 0, 0, 0.73);
+  -moz-box-shadow: 14px 21px 66px 0px rgba(0, 0, 0, 0.73);
+  border-radius: 10px;
+  padding: 10px;
+  height: 80%;
+
+  display: flex;
+  /* margin-bottom: 30px; */
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.15);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+border: 1px solid rgba(255, 255, 255, 1);
+
+
+
+
+ 
+  /* background-color: #031956; */
+  border-radius: 12px;
+  
+}
+.title h2 {
+ 
     
-}
-.title h2{
-    margin-left: 20px;
-    background: -webkit-linear-gradient(315deg, #7ee8fa 0%, #80ff72 74%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
+  margin-left: 20px;
+  /* background: linear-gradient(315deg, #c56a4e 0%, #fe0944 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+  color: #ffffff;
+  font-family: 'Nunito', sans-serif;
 
 
-   
-     
-   
+
 
 }
-.title h3{
-    margin-top: 25px;
-    height: auto;
-    color: rgb(43, 231, 143);
-    
-    text-align: justify;
-    word-wrap: break-word;
-    width: auto;
+.title h3 {
+  margin-top: 25px;
+  height: auto;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  /* background: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  color: #ffffff;
+  text-align: justify;
+  word-wrap: break-word;
+  width: auto;
+  font-size: 30px;
 }
 
-#shortname{
-    margin-left: 20px;
+#shortname {
+  margin-left: 37px;
 }
 
-#producttitle{
-    margin-left: 95px;
+#producttitle {
+  margin-left: 85px;
 }
 
-#productdesc{
-    margin-left: 85px;
+#productdesc {
+  margin-left: 85px;
 }
 
-#productfromdate{
-    margin-left: 25px;
+#productfromdate {
+  margin-left: 42px;
 }
 
-#producttodate{
-    margin-left: 55px;
+#producttodate {
+  margin-left: 62px;
+}
+
+.tag{
+  
+  height: 30px;
+  padding: 6px;
+  text-align: center;
+  width: auto;
+  color: blue;
+
+
+  
 }

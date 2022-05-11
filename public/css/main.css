@@ -8,8 +8,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: #f2eded;
-    color: white;
+   
+
+    font-family: "Noto Sans", sans-serif;
+   
+    background-size: cover;
+  
+    background-repeat: no-repeat;
 }
 
 a {
@@ -27,7 +32,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -36,6 +41,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .res {
@@ -50,7 +56,7 @@ path {
 }
 
 h1.title {
-    /* color: #818181; */
+    
     color: #4285F4;
     padding: 10px;
     font-size: 3rem;

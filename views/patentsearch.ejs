@@ -1,3 +1,4 @@
+<%- include ('navbar.ejs') %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,45 +10,51 @@
     <link rel="stylesheet" href="/css/patent.css" />
   </head>
   <body>
-    <form action="/trends/patent" method="POST" autocomplete="off">
-      <input
-        type="text"
-        id="keyword"
-        name="search"
-        class="search"
-        placeholder="Enter Uspto productShortName"
-        required
-      />
-
-      <button class="btn" type="submit" value="search">Search</button>
-    </form>
-    
-      <% { %>
-     
-       
-          <div class="title">
-            <h2>ProductShortName:   </h2>
-            <h3 id="shortname"><%=articles.productShortName %></h3>
-          </div> 
-          <div class="title">
-            <h2>ProductTitle:   </h2>
-            <h3 id="producttitle"><%=articles.productTitle %></h3>
-          </div> 
-          <div class="title">
-            <h2>ProductDesc:   </h2>
-            <h3 id="productdesc"><%=articles.productDesc %></h3>
-          </div> 
-          <div class="title">
-            <h2>ProductFromDate:   </h2>
-            <h3 id="productfromdate"><%=articles.productFromDate %></h3>
-          </div> 
-          <div class="title">
-            <h2>ProductToDate:   </h2>
-            <h3 id="producttodate"><%=articles.productToDate %></h3>
-          </div> 
+    <div class="field">
+      <form action="/trends/patent" method="POST" autocomplete="off">
+        <input
+          type="text"
+          id="keyword"
+          name="search"
+          class="search"
+          placeholder="Enter Uspto productShortName"
+          required
+        />
+        <button  class="btn btn-primary" value="search" type="submit">
+          Search
+        </button>
         
+      </form>
+    </div>
+    <div class="Body">
+     
+      <% { %>
+      <ul class="list-group">
+        <li class="list-group-item d-flex mb-1" aria-disabled="true">
+          <div class="tag">ProductShortName :</div>
+         <div id="shortname"> <%=articles.productShortName %> </div> 
+        </li>
+        <li class="list-group-item d-flex mb-2">
+          <div class="tag">ProductTitle :</div>
+            <div id="producttitle"> <%=articles.productTitle %></div>
+          
+        </li>
+        <li class="list-group-item d-flex mb-2">
+          <div class="tag">ProductDesc:</div>
 
-      <% } %>
- 
+         <div id="productdesc"><%=articles.productDesc %></div> 
+        </li>
+        <li class="list-group-item d-flex mb-2">
+          <div class="tag">ProductFromDate :</div>
+          <div id="productfromdate"><%=articles.productFromDate %></div>
+        </li>
+        <li class="list-group-item d-flex mb-2">
+          <div class="tag">ProductToDate :</div>
+
+          <div id="producttodate"><%=articles.productToDate %></div>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
+<% } %>

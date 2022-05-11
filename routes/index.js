@@ -22,9 +22,9 @@ const {
 
 
 
-router.get('/overtime', getOverTime)
+router.get('/google', getOverTime)
     
-    .post('/overtime', postOverTime)
+    .post('/google', postOverTime)
     
     .get('/daily', getDaily)
     

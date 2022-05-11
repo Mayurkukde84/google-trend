@@ -23,7 +23,7 @@ app.use(helmet());
 
 const index = require('./routes/index');
 app.get('/', (req, res)=>{
-    res.redirect('/trends/overtime')
+    res.redirect('/trends/google')
 });
 
 app.use('/trends', index);
